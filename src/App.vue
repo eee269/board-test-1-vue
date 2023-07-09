@@ -1,15 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <header class="header">
+      <router-link to="/login">로그인</router-link>
+      <!-- <span style="display:block;" @click="logout"> {{ $t('auth.logout') }}</span> -->
+      <router-link to="/"> HOME </router-link>
+    </header>
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  methods: {
   }
 }
 </script>
@@ -21,6 +24,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+html {
+  box-sizing: border-box;
+}
+
+.header {
+  color: violet;
 }
 </style>
